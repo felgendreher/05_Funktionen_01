@@ -17,7 +17,7 @@ function test()
 // 2a. Parametrisierung + Datenübergabe von INNEN
 
 // Aufruf (call)
-ausgabeNamen();
+// ausgabeNamen();
 
 // Funktion
 function ausgabeNamen() {
@@ -26,3 +26,25 @@ function ausgabeNamen() {
 }
 
 // console.log(firstName);  // .. stays in Vegas!
+
+/***** Funktionen 02b *****/
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
+
+function ausgabeNamenParam(firstName) {
+
+    const cond1 = (firstName == "");
+    const cond2 = (firstName == undefined);
+
+    if (cond1 || cond2 ) {
+        firstName = "Nobody";
+    }
+
+    console.log("Hallo " + firstName + "!");
+}
+
+
+// Argumente (args) --> Daten für Parameter
+ausgabeNamenParam("Riccardo"); // Argument(e)
+ausgabeNamenParam("Anna");
+ausgabeNamenParam();
+ausgabeNamenParam(prompt("Vorname?"));
